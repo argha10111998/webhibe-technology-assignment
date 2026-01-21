@@ -55,7 +55,7 @@ exports.signup = async (req, res, next) => {
 
     const domain = email.split("@")[1];
 
-    console.log(domain);
+    // console.log(domain);
     if (!(await hasMX(domain))) {
       const err = new Error("Invalid email format");
       err.statusCode = 400;
